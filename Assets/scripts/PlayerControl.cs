@@ -75,12 +75,12 @@ public class PlayerControl : MonoBehaviour {
 			damageImage.color = Color.Lerp(damageImage.color,Color.clear,flashSpeed*Time.deltaTime);
 		}
 		anim.SetFloat ("Speed", Mathf.Abs(Input.GetAxis("Horizontal")));
-		Raycasting ();
+		Movement();
 		damaged = false;
 	}
 	void FixedUpdate()
 	{
-		Movement ();
+		Raycasting ();
 	}
 	void OnTriggerEnter2D(Collider2D other)
 	{
